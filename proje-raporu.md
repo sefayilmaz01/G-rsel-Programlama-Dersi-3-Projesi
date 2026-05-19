@@ -1,20 +1,20 @@
 # Proje Raporu
 
 ## Oyunun Adı
-Basit Flappy Bird Oyunu
+Sayı Tahmin Oyunu
 
 ---
 
 ## Oyunun Amacı
-Bu projede amaç, klasik Flappy Bird mantığında çalışan basit bir 2D oyun geliştirmektir. Oyuncu kuş karakterini kontrol ederek engellerin arasından geçmeye çalışır. Oyun refleks ve zamanlama becerisine dayalıdır.
+Bilgisayarın 1 ile 20 arasında rastgele tuttuğu sayıyı 5 hakkınızda tahmin etmek
 
 ---
 
 ## Nasıl Oynanır?
-Oyuncu, mouse sol tıkı ile kuşu yukarı doğru zıplatır. Borular arasından geçerek mümkün olduğunca yüksek skor elde etmeye çalışır. Borulara veya yere çarpıldığında oyun sona erer.
+oyuncu tahminini input alanına yazar ve butona basarak tahminde bulunur
 
 ### Kontroller
-- Sol Mouse Tuşu → Zıplama
+- Sol Mouse Tuşu → tahmin
 
 ---
 
@@ -22,12 +22,9 @@ Oyuncu, mouse sol tıkı ile kuşu yukarı doğru zıplatır. Borular arasından
 
 | Bileşen | Kullanım Amacı |
 |------|------|
-| Rigidbody2D | Kuşun fiziksel hareketlerini sağlamak |
-| BoxCollider2D | Çarpışma kontrolü yapmak |
-| Sprite Renderer | Oyun görsellerini ekrana çizdirmek |
-| Camera | Oyun görüntüsünü sağlamak |
-| Prefab System | Boruların tekrar üretimini sağlamak |
-| Transform | Nesnelerin konum, dönüş ve ölçek işlemleri |
+| text | Oyunucuyu yönlendiremk |
+| InputField | oyuncunun tahminini almak |
+| Button | oyunucnun tahminini bilgisayara göndermek 
 
 ---
 
@@ -35,27 +32,24 @@ Oyuncu, mouse sol tıkı ile kuşu yukarı doğru zıplatır. Borular arasından
 
 | Script Adı | Görevi |
 |------|------|
-| Birdy.cs | Kuşun zıplama, düşme ve dönüş mekaniklerini yönetir |
-| Move.cs | Arka plan ve boruların hareketini sağlar |
-| Spawner.cs | Boruları rastgele ve belirli aralıklarla üretir |
+| SayiTahminOyunu.cs | oyunun bütün sistemi bu script dir sayı üretimi, tahmin kontrolü, kalan hak kontrolü, kazanma, kaybetme ve yeniden başlatma kontrolleri |
 
 ---
 
 ## Oyun Mekanikleri
 
-- Rastgele boru üretim sistemi
-- Çarpışma kontrol sistemi
-- Skor sistemi
-- Fizik tabanlı zıplama mekaniği
+- Rastgele sayı üretim sistemi
+- tahmin kontrol sistemi
+- hak sistemi
 - Sonsuz oyun döngüsü
 
 ---
 
 ## Karşılaşılan Zorluklar
 
-Geliştirme sürecinde kuşun zıplama fiziğinin dengelenmesi, boruların doğru aralıklarla spawn edilmesi ve çarpışma sisteminin hatasız çalışması gibi problemler yaşanmıştır. Bu sorunlar Unity fizik ayarları ve script optimizasyonları ile çözülmüştür.
+input bileşenini ayarlamak oyuncudan alınan değeri bilgisayara göndermek
 
 ---
 
 ## Sonuç
-Bu proje sayesinde Unity 2D oyun geliştirme mantığı, fizik sistemleri, prefab kullanımı ve C# script yapısı öğrenilmiştir.
+Bu proje sayesinde Unity 2D oyun geliştirme mantığı, bu tür olan oyunlara ilgim ve bilgim artmıştır
